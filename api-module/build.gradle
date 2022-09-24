@@ -23,8 +23,13 @@ dependencies {
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// 모듈 의존성
+	implementation project(':common-module')
 }
 
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+tasks.register('prepareKotlinBuildScriptModel') {}
