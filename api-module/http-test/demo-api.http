@@ -1,1 +1,5 @@
+### Common 모듈의 순수 Java 클래스 사용 API
 GET http://localhost:8080/save
+
+### Common 모듈의 Spring Bean 사용 API
+GET http://localhost:8080/find
