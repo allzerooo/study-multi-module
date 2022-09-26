@@ -3,6 +3,7 @@ package study.spring.apimodule.service;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+import study.spring.apimodule.exception.CustomException;
 import study.spring.commonmodule.enums.Code;
 import study.spring.commonmodule.service.CommonDemoService;
 
@@ -21,5 +22,12 @@ public class DemoService {
 	public String find() {
 		log.info(commonDemoService.commonDemoService());
 		return "find";
+	}
+
+	public String exception() {
+		if (true) {
+			throw new CustomException(Code.UNKNOWN_ERROR);
+		}
+		return "exception";
 	}
 }
